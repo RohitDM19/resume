@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Rohit Kumar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #e1e4e8;
+            margin-bottom: 30px;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4a6ee0;
+            margin-right: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-info h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .profile-info h2 {
+            font-size: 18px;
+            color: #7f8c8d;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #34495e;
+            transition: transform 0.2s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: #4a6ee0;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Social Buttons */
+        .social-buttons {
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+        }
+        
+        .whatsapp {
+            background-color: #25D366;
+        }
+        
+        .email {
+            background-color: #D44638;
+        }
+        
+        .linkedin {
+            background-color: #0077B5;
+        }
+        
+        .github {
+            background-color: #333;
+        }
+        
+        /* Resume Sections */
+        .resume-section {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .resume-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #4a6ee0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f2f5;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 50px;
+            height: 2px;
+            background-color: #4a6ee0;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        /* Experience Section - Enhanced */
+        .experience-container, .education-container {
+            position: relative;
+        }
+        
+        .experience-container::before, .education-container::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #4a6ee0, #8a2be2);
+            border-radius: 2px;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding-left: 40px;
+            position: relative;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 20px 20px 20px 40px;
+        }
+        
+        .experience-item:hover, .education-item:hover {
+            background-color: #f8faff;
+            transform: translateX(5px);
+        }
+        
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #4a6ee0;
+            border: 3px solid #e6f0ff;
+            z-index: 1;
+        }
+        
+        .job-title, .degree {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .company, .university {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .company i, .university i {
+            margin-right: 8px;
+            color: #4a6ee0;
+        }
+        
+        .date {
+            font-size: 14px;
+            color: #95a5a6;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            background: #f0f4ff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            width: fit-content;
+        }
+        
+        .date i {
+            margin-right: 8px;
+            color: #4a6ee0;
+        }
+        
+        .job-description, .education-description {
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .job-description::before, .education-description::before {
+            content: '»';
+            position: absolute;
+            left: 0;
+            color: #4a6ee0;
+        }
+        
+        .job-description p, .education-description p {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        /* Skills Section - Enhanced */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .skill {
+            background-color: #f0f4f8;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #4a6ee0;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 110, 224, 0.2);
+            background-color: #e6f0ff;
+        }
+        
+        .skill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(74, 110, 224, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill:hover::after {
+            transform: translateX(100%);
+        }
+        
+        .skill i {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        
+        /* Skill Level Indicators */
+        .skill-level {
+            height: 5px;
+            background-color: #e0e6f5;
+            border-radius: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-level-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4a6ee0, #8a2be2);
+            border-radius: 5px;
+            transition: width 1s ease;
+            width: 0;
+        }
+        
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover {
+            background-color: #f8faff;
+            transform: translateX(5px);
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .project-title i {
+            margin-right: 10px;
+            color: #4a6ee0;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .project-link {
+            color: #4a6ee0;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        .project-link:hover {
+            background-color: #f0f4ff;
+            transform: translateY(-2px);
+        }
+        
+        .project-link i {
+            margin-right: 5px;
+        }
+        
+        /* Contact Button */
+        .contact-btn {
+            display: inline-block;
+            background-color: #4a6ee0;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 10px rgba(74, 110, 224, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-btn:hover {
+            background-color: #3a5bd9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(74, 110, 224, 0.4);
+        }
+        
+        .contact-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        
+        .contact-btn:hover::after {
+            transform: translateX(100%);
+        }
+        
+        /* Progress Animation */
+        @keyframes progress {
+            0% { width: 0; }
+            100% { width: attr(data-level); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile {
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+            
+            .profile-img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .contact-info {
+                align-items: center;
+            }
+            
+            .social-buttons {
+                justify-content: center;
+            }
+            
+            .job-title, .degree {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .experience-item, .education-item {
+                padding-left: 30px;
+            }
+            
+            .experience-container::before, .education-container::before {
+                left: 10px;
+            }
+            
+            .experience-item::before, .education-item::before {
+                left: 3px;
+            }
+        }
+        
+        /* Floating Elements */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Certificate Badges */
+        .cert-badge {
+            display: inline-block;
+            background-color: #e6f7ff;
+            color: #1890ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 10px;
+            border: 1px solid #91d5ff;
+        }
+        
+        /* Modal Enhancements */
+        #contactModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            transform: scale(0.9);
+            animation: scaleUp 0.3s ease forwards;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        @keyframes scaleUp {
+            to { transform: scale(1); }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: #4a6ee0;
+            box-shadow: 0 0 0 3px rgba(74, 110, 224, 0.1);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #4a6ee0;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #3a5bd9;
+        }
+        
+        /* Achievement Badges */
+        .achievement-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            border-radius: 20px;
+            padding: 5px 12px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #495057;
+            border: 1px solid #e9ecef;
+        }
+        
+        .achievement-badge i {
+            margin-right: 5px;
+            color: #4a6ee0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile">
+                <img src="profilepic.jpeg" alt="Profile Picture" class="profile-img floating">
+                <div class="profile-info">
+                    <h1>Rohit Kumar</h1>
+                    <h2>Computer Science Student</h2>
+                    <div class="social-buttons">
+                        <div class="social-btn instagram" onclick="openSocial('instagram')">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="social-btn whatsapp" onclick="openSocial('whatsapp')">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="social-btn email" onclick="openSocial('email')">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="social-btn linkedin" onclick="openSocial('linkedin')">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="social-btn github" onclick="openSocial('github')">
+                            <i class="fab fa-github"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 6205974846</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>South Asian University, New Delhi</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span>www.rohit.com</span>
+                </div>
+                <button class="contact-btn" onclick="openContactForm()">
+                    <i class="fas fa-paper-plane"></i> Contact Me
+                </button>
+            </div>
+        </header>
+        
+        <!-- About Section -->
+        <section class="resume-section">
+            <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
+            <p>Enthusiastic and goal-oriented Computer Science undergraduate at South Asian University, with a strong foundation in software development and a keen interest in full-stack technologies. Passionate about building efficient and user-friendly digital solutions, with growing experience in JavaScript frameworks and cloud-based platforms. Eager to apply theoretical knowledge to real-world projects, develop scalable applications, and contribute to innovative software solutions.</p>
+        </section>
+        
+        <!-- Experience Section - Enhanced -->
+        <section class="resume-section">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <h3 class="job-title">
+                        Web Development Intern
+                        <span class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            January 2025
+                        </span>
+                    </h3>
+                    <h4 class="company">
+                        <i class="fas fa-building"></i> CodeCrafters Hackathon
+                    </h4>
+                    <div class="job-description">
+                        <p>Built a responsive portfolio website using HTML, CSS, and JavaScript</p>
+                        <p>Collaborated with a team of 4 to design a front-end UI for a productivity web app</p>
+                        <p>Presented project to a panel of judges and received positive feedback for design and usability</p>
+                        <p>Gained hands-on experience with GitHub for version control</p>
+                    </div>
+                    <div class="achievements">
+                        <span class="achievement-badge"><i class="fas fa-trophy"></i> Best Design Award</span>
+                        <span class="achievement-badge"><i class="fas fa-users"></i> Team Project</span>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">
+                        Participant - Ethical Hacking Bootcamp
+                        <span class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            March 2025
+                        </span>
+                    </h3>
+                    <h4 class="company">
+                        <i class="fas fa-shield-alt"></i> CyberShield Hack Fest
+                    </h4>
+                    <div class="job-description">
+                        <p>Explored basic networking concepts and penetration testing techniques</p>
+                        <p>Simulated attack scenarios to understand system vulnerabilities</p>
+                        <p>Learned tools like Wireshark and Nmap in a guided hacking challenge</p>
+                        <p>Developed a strong foundation in cybersecurity best practices</p>
+                    </div>
+                    <div class="achievements">
+                        <span class="achievement-badge"><i class="fas fa-certificate"></i> Completion Certificate</span>
+                        <span class="achievement-badge"><i class="fas fa-lock"></i> Security Fundamentals</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section - Enhanced -->
+        <section class="resume-section">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3 class="degree">
+                        B.Tech in Computer Science
+                        <span class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            2024 - Present
+                        </span>
+                    </h3>
+                    <h4 class="university">
+                        <i class="fas fa-university"></i> South Asian University, New Delhi
+                    </h4>
+                    <div class="education-description">
+                        <p>Currently in 2nd semester with a CGPA of 8.75</p>
+                        <p>Strong interest in full-stack development, cloud computing, and cybersecurity</p>
+                        <p>Active participant in coding competitions and hackathons</p>
+                    </div>
+                    <div class="achievements">
+                        <span class="achievement-badge"><i class="fas fa-star"></i> Dean's List</span>
+                        <span class="achievement-badge"><i class="fas fa-code"></i> Coding Club Member</span>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <h3 class="degree">
+                        B.Tech in Biomedical Robotics (1 Year)
+                        <span class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            2023 - 2024
+                        </span>
+                    </h3>
+                    <h4 class="university">
+                        <i class="fas fa-university"></i> MIT, Muzaffarpur
+                    </h4>
+                    <div class="education-description">
+                        <p>Completed one year in Biomedical Robotics before transferring</p>
+                        <p>Gained foundational knowledge in robotics and engineering principles</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <h3 class="degree">
+                        Senior Secondary (12th)
+                        <span class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            2021 - 2023
+                        </span>
+                    </h3>
+                    <h4 class="university">
+                        <i class="fas fa-school"></i> Mirza Galib College, Gaya
+                    </h4>
+                    <div class="education-description">
+                        <p>Scored 89% in Science stream</p>
+                        <p>Specialized in Physics, Chemistry, and Mathematics</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <h3 class="degree">
+                        Secondary (10th)
+                        <span class="date">
+                            <i class="far fa-calendar-alt"></i>
+                            Completed in 2021
+                        </span>
+                    </h3>
+                    <h4 class="university">
+                        <i class="fas fa-school"></i> G.D. Public School, Gaya
+                    </h4>
+                    <div class="education-description">
+                        <p>Scored 87% with a strong academic foundation</p>
+                        <p>Active participant in science exhibitions and quizzes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section - Enhanced -->
+        <section class="resume-section">
+            <h2 class="section-title"><i class="fas fa-code"></i> Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <i class="fab fa-js"></i> JavaScript
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-css3-alt"></i> CSS
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-html5"></i> HTML
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i> Python
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-c"></i> C Programming
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="70%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-java"></i> Java
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="65%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i> SQL
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="75%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-git-alt"></i> Git
+                    <div class="skill-level">
+                        <div class="skill-level-bar" data-level="70%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section - Enhanced -->
+        <section class="resume-section">
+            <h2 class="section-title"><i class="fas fa-project-diagram"></i> Projects</h2>
+            <div class="project-item">
+                <h3 class="project-title">
+                    <i class="fas fa-shopping-cart"></i> E-commerce Platform
+                </h3>
+                <p>Full-featured online store with payment integration, inventory management, and analytics dashboard built with MERN stack (MongoDB, Express, React, Node.js).</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+                <div class="tech-used">
+                    <span class="skill">React</span>
+                    <span class="skill">Node.js</span>
+                    <span class="skill">MongoDB</span>
+                    <span class="skill">Stripe API</span>
+                </div>
+            </div>
+            <div class="project-item">
+                <h3 class="project-title">
+                    <i class="fas fa-tasks"></i> Task Management App
+                </h3>
+                <p>Collaborative tool for teams with real-time updates, notifications, and reporting features. Implemented with React for frontend and Firebase for backend services.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        Live Demo
+                    </a>
+                    <a href="#" class="project-link">
+                        <i class="fab fa-github"></i>
+                        Source Code
+                    </a>
+                </div>
+                <div class="tech-used">
+                    <span class="skill">React</span>
+                    <span class="skill">Firebase</span>
+                    <span class="skill">Material UI</span>
+                    <span class="skill">WebSockets</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Enhanced Contact Form Modal -->
+    <div id="contactModal" style="display: none;">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeContactForm()">&times;</button>
+            <h2 style="margin-bottom: 20px; color: #4a6ee0;">
+                <i class="fas fa-envelope"></i> Contact Me
+            </h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Your Message" required rows="5"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle social media button clicks
+        function openSocial(platform) {
+            let url;
+            switch(platform) {
+                case 'instagram':
+                    url = 'https://www.instagram.com/';
+                    break;
+                case 'whatsapp':
+                    url = 'https://wa.me/6205974846';
+                    break;
+                case 'email':
+                    url = 'mailto:rohit.saw.2647@g.com';
+                    break;
+                case 'linkedin':
+                    url = 'https://www.linkedin.com/in/rohit-kumar-70a75b294/';
+                    break;
+                case 'github':
+                    url = 'https://github.com/RohitDM19';
+                    break;
+                default:
+                    return;
+            }
+            window.open(url, '_blank');
+        }
+        
+        // Function to open contact form modal
+        function openContactForm() {
+            document.getElementById('contactModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Function to close contact form modal
+        function closeContactForm() {
+            document.getElementById('contactModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Show success message with animation
+            const modalContent = document.querySelector('.modal-content');
+            modalContent.innerHTML = `
+                <div style="text-align: center; padding: 30px;">
+                    <div style="font-size: 60px; color: #4CAF50; margin-bottom: 20px;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 style="color: #4a6ee0; margin-bottom: 15px;">Message Sent!</h2>
+                    <p>Thank you for reaching out. I'll get back to you soon.</p>
+                    <button onclick="closeContactForm()" style="margin-top: 20px; background-color: #4a6ee0; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+                        Close
+                    </button>
+                </div>
+            `;
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === document.getElementById('contactModal')) {
+                closeContactForm();
+            }
+        });
+        
+        // Animate skill level bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-level-bar');
+            skillBars.forEach(bar => {
+                const level = bar.getAttribute('data-level');
+                bar.style.width = level;
+            });
+        }
+        
+        // Initialize skill bars when page loads
+        window.addEventListener('load', animateSkillBars);
+        
+        // Add scroll animation for sections
+        function animateOnScroll() {
+            const sections = document.querySelectorAll('.resume-section');
+            sections.forEach(section => {
+                const sectionPosition = section.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if(sectionPosition < screenPosition) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Set initial state for animation
+        document.querySelectorAll('.resume-section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Trigger once on load
+        animateOnScroll();
+    </script>
+</body>
+</html>
